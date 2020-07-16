@@ -58,6 +58,12 @@ input UpdateCommentInput {
   text: String
 }
 
+enum CalculationType {
+  INCL
+  EXCL
+  TAX
+}
+
 type User {
   id: ID!
   name: String!
@@ -65,6 +71,8 @@ type User {
   age: Int
   posts: [Post!]!
   comments: [Comment!]!
+  credit: Int
+  calc: CalculationType!
 }
 
 type Post {
